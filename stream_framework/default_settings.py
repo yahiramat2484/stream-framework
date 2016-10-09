@@ -2,10 +2,10 @@ from os import environ
 # : we recommend that you connect to Redis via Twemproxy
 STREAM_REDIS_CONFIG = {
     'default': {
-        'host': os.environ('REDIS_HOST'),
-        'port': os.environ('REDIS_PORT'),
+        'host': environ('REDIS_HOST'),
+        'port': environ('REDIS_PORT'),
         'db': 0,
-        'password': os.environ('REDIS_PASSWORD')
+        'password': environ('REDIS_PASSWORD')
     },
 }
 
