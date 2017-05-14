@@ -59,7 +59,8 @@ class Activity(BaseActivity):
     actor, target and object are lazy by default
     '''
 
-    def __init__(self, actor, verb, object, target=None, time=None, extra_context=None):
+    def __init__(self, actor, verb, object, target=None, time=None,
+                 extra_context=None, *args, **kwargs):
         self.verb = verb
         self.time = time or datetime.datetime.utcnow()
         # either set .actor or .actor_id depending on the data
